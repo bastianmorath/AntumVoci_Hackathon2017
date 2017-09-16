@@ -14,7 +14,7 @@ class VocilistTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.barTintColor=Globals.greenColor
         loadSampleVoiclists()
     }
 
@@ -30,7 +30,6 @@ class VocilistTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        NSLog(String(vocilists.count))
         return vocilists.count
     }
 
@@ -100,34 +99,19 @@ class VocilistTableViewController: UITableViewController {
  
     
     private func loadSampleVoiclists() {
-        
-        guard let vocicard1 = Vocicard(word: "Tisch", translation: "Table") else {
-            fatalError("Unable to instantiate vocicard1")
-        }
-        guard let vocicard2 = Vocicard(word: "Stuhl", translation: "Chair") else {
-            fatalError("Unable to instantiate vocicard2")
-        }
-        guard let vocicard3 = Vocicard(word: "Essen", translation: "Food") else {
-            fatalError("Unable to instantiate vocicard3")
-        }
-        guard let vocicard4 = Vocicard(word: "Auto", translation: "Car") else {
-            fatalError("Unable to instantiate vocicard4")
-        }
-        guard let vocicard5 = Vocicard(word: "Töff", translation: "Motorcycle") else {
-            fatalError("Unable to instantiate vocicard5")
-        }
-        
-        guard let vocilist1 = Vocilist(name: "Vocilist 1", languageFormat: Globals.LanguageFormat.DE_EN, cards: [vocicard1, vocicard3]) else {
+        guard let vocilist1 = Vocilist(name: "Vocilist 1", languageFormat: Globals.LanguageFormat.DE_EN, cards:[] ) else {
             fatalError("Unable to instantiate meal1")
         }
-        guard let vocilist2 = Vocilist(name: "Vocilist 2", languageFormat: Globals.LanguageFormat.DE_EN, cards: [vocicard1, vocicard2, vocicard3, vocicard4, vocicard5]) else {
-            fatalError("Unable to instantiate meal1")
-        }
-        guard let vocilist3 = Vocilist(name: "Vocilist 3", languageFormat: Globals.LanguageFormat.DE_EN, cards: [vocicard3, vocicard4, vocicard5]) else {
-            fatalError("Unable to instantiate meal1")
+       
+        for i in 1...20 {
+            guard let vocicard = Vocicard(word: "card"+String(i), translation: "translation"+String(i)) else {
+                fatalError("Unable to instantiate vocicard1")
+            }
+            vocilist1.cards += [vocicard]
         }
         
-        vocilists += [vocilist1, vocilist2, vocilist3]
+        
+        vocilists += [vocilist1]
     }
 
 }

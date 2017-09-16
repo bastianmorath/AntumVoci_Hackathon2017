@@ -15,9 +15,7 @@ class Vocilist {
     var languageFormat: Globals.LanguageFormat
     
     init?(name: String, languageFormat: Globals.LanguageFormat, cards: [Vocicard]) {
-        guard !cards.isEmpty else {
-            return nil
-        }
+        
         self.name = name
         self.cards = cards
         self.languageFormat = languageFormat
