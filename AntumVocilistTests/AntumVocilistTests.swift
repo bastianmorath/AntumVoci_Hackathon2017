@@ -11,9 +11,5 @@ import XCTest
 
 class AntumVocilistTests: XCTestCase {
     
-    func testVocilistInitializationSucceeds() {
-        let noCards = Vocilist.init(name: "noCards", cards: [])
-        XCTAssertNil(noCards)
-    }
-    
+       
 }

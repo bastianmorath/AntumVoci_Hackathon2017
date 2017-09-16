@@ -18,7 +18,7 @@ class VocicardViewController: UIViewController, UITableViewDelegate, UITableView
             return self.tableView.cellForRow(at: currentActiveIndex) as! VocicardTableViewCell
         }
     }
-   
+ 
     @IBAction func wrongButton(_ sender: Any) {
         vocilist.cards[currentActiveIndex.row].status = Globals.vocicardCellStatus.wrong
         _updateTableView()
@@ -34,12 +34,45 @@ class VocicardViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func viewReleased(_ sender: Any) {
-            activeCell.coverView.isHidden = false
+        activeCell.coverView.isHidden = false
     }
     
     
+    @IBOutlet weak var viewButton: UIButton!
+    @IBOutlet weak var wrongButton: UIButton!
+    @IBOutlet weak var correctButton: UIButton!
     
     @IBOutlet weak var tableView: UITableView!
+    
+  
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.delegate=self
+        self.tableView.dataSource=self
+
+        self.navigationItem.title = vocilist.name
+        self.viewButton.setImage(UIImage(named: "eye"), for: .normal)
+        self.wrongButton.setImage(UIImage(named: "delete"), for: .normal)
+        self.correctButton.setImage(UIImage(named: "checkmark"), for: .normal)
+        self.correctButton.imageEdgeInsets = UIEdgeInsetsMake(42,42,42,42)
+        self.wrongButton.imageEdgeInsets = UIEdgeInsetsMake(50,50,50,50)
+        self.viewButton.imageEdgeInsets = UIEdgeInsetsMake(42,42,42,42)
+        self.wrongButton.imageView?.contentMode = .scaleAspectFit
+        self.viewButton.imageView?.contentMode = .scaleAspectFit
+        self.correctButton.imageView?.contentMode = .scaleAspectFit
+
+        let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
+        self.viewButton.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    func handlePan() {
+        
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     func _updateTableView() {
         let newIndexPath = IndexPath(row: currentActiveIndex.row+1, section: currentActiveIndex.section)
@@ -49,23 +82,6 @@ class VocicardViewController: UIViewController, UITableViewDelegate, UITableView
         self.tableView.scrollToRow(at: currentActiveIndex, at: .middle, animated: true)
         self.tableView.reloadData()
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.tableView.delegate=self
-        self.tableView.dataSource=self
-        self.tableView.separatorStyle = .none
-
-        self.navigationItem.title = vocilist.name
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
     
     /*
     // MARK: - Navigation
@@ -112,6 +128,11 @@ class VocicardViewController: UIViewController, UITableViewDelegate, UITableView
         }
         return cell
 
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentActiveIndex=indexPath
+        tableView.reloadData()
     }
 
     
