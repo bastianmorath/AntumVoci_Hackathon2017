@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		031336621F6D5111009B2B4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336611F6D5111009B2B4D /* AppDelegate.swift */; };
-		031336641F6D5111009B2B4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336631F6D5111009B2B4D /* ViewController.swift */; };
 		031336671F6D5111009B2B4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031336651F6D5111009B2B4D /* Main.storyboard */; };
 		031336691F6D5112009B2B4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031336681F6D5112009B2B4D /* Assets.xcassets */; };
 		0313366C1F6D5112009B2B4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0313366A1F6D5112009B2B4D /* LaunchScreen.storyboard */; };
 		031336771F6D5112009B2B4D /* AntumVocilistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336761F6D5112009B2B4D /* AntumVocilistTests.swift */; };
+		031336821F6D51D3009B2B4D /* Vocilist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336811F6D51D3009B2B4D /* Vocilist.swift */; };
+		031336841F6D5337009B2B4D /* Vocicard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336831F6D5337009B2B4D /* Vocicard.swift */; };
+		031336861F6D5605009B2B4D /* VocilistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336851F6D5605009B2B4D /* VocilistTableViewCell.swift */; };
+		031336881F6D583E009B2B4D /* VocilistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336871F6D583E009B2B4D /* VocilistTableViewController.swift */; };
+		0313368A1F6D5A67009B2B4D /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336891F6D5A67009B2B4D /* Globals.swift */; };
+		0313368E1F6D709F009B2B4D /* VocicardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0313368D1F6D709F009B2B4D /* VocicardTableViewCell.swift */; };
+		031336921F6D724E009B2B4D /* VocicardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336911F6D724E009B2B4D /* VocicardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +34,6 @@
 /* Begin PBXFileReference section */
 		0313365E1F6D5111009B2B4D /* AntumVocilist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntumVocilist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		031336611F6D5111009B2B4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		031336631F6D5111009B2B4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		031336661F6D5111009B2B4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		031336681F6D5112009B2B4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0313366B1F6D5112009B2B4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +41,13 @@
 		031336721F6D5112009B2B4D /* AntumVocilistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AntumVocilistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		031336761F6D5112009B2B4D /* AntumVocilistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntumVocilistTests.swift; sourceTree = "<group>"; };
 		031336781F6D5112009B2B4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		031336811F6D51D3009B2B4D /* Vocilist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocilist.swift; sourceTree = "<group>"; };
+		031336831F6D5337009B2B4D /* Vocicard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocicard.swift; sourceTree = "<group>"; };
+		031336851F6D5605009B2B4D /* VocilistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocilistTableViewCell.swift; sourceTree = "<group>"; };
+		031336871F6D583E009B2B4D /* VocilistTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocilistTableViewController.swift; sourceTree = "<group>"; };
+		031336891F6D5A67009B2B4D /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		0313368D1F6D709F009B2B4D /* VocicardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocicardTableViewCell.swift; sourceTree = "<group>"; };
+		031336911F6D724E009B2B4D /* VocicardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocicardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +90,14 @@
 			isa = PBXGroup;
 			children = (
 				031336611F6D5111009B2B4D /* AppDelegate.swift */,
-				031336631F6D5111009B2B4D /* ViewController.swift */,
+				031336811F6D51D3009B2B4D /* Vocilist.swift */,
+				031336831F6D5337009B2B4D /* Vocicard.swift */,
+				031336891F6D5A67009B2B4D /* Globals.swift */,
+				031336851F6D5605009B2B4D /* VocilistTableViewCell.swift */,
+				031336871F6D583E009B2B4D /* VocilistTableViewController.swift */,
 				031336651F6D5111009B2B4D /* Main.storyboard */,
+				0313368D1F6D709F009B2B4D /* VocicardTableViewCell.swift */,
+				031336911F6D724E009B2B4D /* VocicardViewController.swift */,
 				031336681F6D5112009B2B4D /* Assets.xcassets */,
 				0313366A1F6D5112009B2B4D /* LaunchScreen.storyboard */,
 				0313366D1F6D5112009B2B4D /* Info.plist */,
@@ -201,8 +219,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				031336641F6D5111009B2B4D /* ViewController.swift in Sources */,
+				031336841F6D5337009B2B4D /* Vocicard.swift in Sources */,
+				031336921F6D724E009B2B4D /* VocicardViewController.swift in Sources */,
+				031336821F6D51D3009B2B4D /* Vocilist.swift in Sources */,
 				031336621F6D5111009B2B4D /* AppDelegate.swift in Sources */,
+				031336881F6D583E009B2B4D /* VocilistTableViewController.swift in Sources */,
+				0313368E1F6D709F009B2B4D /* VocicardTableViewCell.swift in Sources */,
+				0313368A1F6D5A67009B2B4D /* Globals.swift in Sources */,
+				031336861F6D5605009B2B4D /* VocilistTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
