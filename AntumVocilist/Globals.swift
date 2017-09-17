@@ -9,12 +9,14 @@
 import UIKit
 
 class Globals: NSObject {
-    enum LanguageFormat {
-        case DE_EN, DE_FR, EN_FR
+    @objc enum LanguageFormat:Int32 {
+        case DE_EN = 0, DE_FR, EN_FR
     }
-    enum vocicardCellStatus {
-        case correct, wrong, def
+    @objc enum VocicardCellStatus:Int32 {
+        case correct = 0, wrong, def
     }
+    
+    
     static var redColor: UIColor =  {
         return UIColor(red:1.0, green:54.0/255.0, blue:70.0/255.0, alpha:1.0)
     }()

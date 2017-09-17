@@ -15,9 +15,9 @@ class VocilistTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor=Globals.greenColor
-        loadSampleVoiclists()
+        vocilists = DataStore.sharedInstance.getVocilists()!
     }
-
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,7 +41,8 @@ class VocilistTableViewController: UITableViewController {
 
         let vocilist = vocilists[indexPath.row]
         cell.nameLabel.text = vocilist.name
-        cell.languageFormatLabel.text = String(describing: vocilist.languageFormat)
+        NSLog("Name: " + vocilist.languageFormat.description)
+        cell.languageFormatLabel.text = vocilist.languageDescription
         
         return cell
     }
@@ -97,21 +98,7 @@ class VocilistTableViewController: UITableViewController {
         }
     }
  
+    // MARK: - CoreData
     
-    private func loadSampleVoiclists() {
-        guard let vocilist1 = Vocilist(name: "Vocilist 1", languageFormat: Globals.LanguageFormat.DE_EN, cards:[] ) else {
-            fatalError("Unable to instantiate meal1")
-        }
-       
-        for i in 1...20 {
-            guard let vocicard = Vocicard(word: "card"+String(i), translation: "translation"+String(i)) else {
-                fatalError("Unable to instantiate vocicard1")
-            }
-            vocilist1.cards += [vocicard]
-        }
-        
-        
-        vocilists += [vocilist1]
-    }
-
+   
 }

@@ -14,12 +14,12 @@ class VocicardTableViewCell: UITableViewCell {
     @IBOutlet weak var rightLabel: UILabel!
     @IBOutlet weak var coverView: UIView!
     @IBOutlet weak var resultBar: UIView!
-    var status: Globals.vocicardCellStatus = Globals.vocicardCellStatus.correct {
+    var status: Globals.VocicardCellStatus = Globals.VocicardCellStatus.correct {
         didSet {
             switch status {
-            case Globals.vocicardCellStatus.correct:
+            case Globals.VocicardCellStatus.correct:
                 print("Correct")
-            case Globals.vocicardCellStatus.wrong:
+            case Globals.VocicardCellStatus.wrong:
                 print("Wrong")
             default:
                 print("default")

@@ -12,13 +12,17 @@
 		031336691F6D5112009B2B4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031336681F6D5112009B2B4D /* Assets.xcassets */; };
 		0313366C1F6D5112009B2B4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0313366A1F6D5112009B2B4D /* LaunchScreen.storyboard */; };
 		031336771F6D5112009B2B4D /* AntumVocilistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336761F6D5112009B2B4D /* AntumVocilistTests.swift */; };
-		031336821F6D51D3009B2B4D /* Vocilist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336811F6D51D3009B2B4D /* Vocilist.swift */; };
-		031336841F6D5337009B2B4D /* Vocicard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336831F6D5337009B2B4D /* Vocicard.swift */; };
 		031336861F6D5605009B2B4D /* VocilistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336851F6D5605009B2B4D /* VocilistTableViewCell.swift */; };
 		031336881F6D583E009B2B4D /* VocilistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336871F6D583E009B2B4D /* VocilistTableViewController.swift */; };
 		0313368A1F6D5A67009B2B4D /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336891F6D5A67009B2B4D /* Globals.swift */; };
 		0313368E1F6D709F009B2B4D /* VocicardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0313368D1F6D709F009B2B4D /* VocicardTableViewCell.swift */; };
 		031336921F6D724E009B2B4D /* VocicardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336911F6D724E009B2B4D /* VocicardViewController.swift */; };
+		031336C41F6DBE3F009B2B4D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 031336C21F6DBE3F009B2B4D /* Model.xcdatamodeld */; };
+		031336D11F6DC5B8009B2B4D /* Vocilist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336CD1F6DC5B8009B2B4D /* Vocilist.swift */; };
+		031336D21F6DC5B8009B2B4D /* Vocilist+CoreDataProperties2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336CE1F6DC5B8009B2B4D /* Vocilist+CoreDataProperties2.swift */; };
+		031336D31F6DC5B8009B2B4D /* Vocicard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336CF1F6DC5B8009B2B4D /* Vocicard.swift */; };
+		031336D41F6DC5B8009B2B4D /* Vocicard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336D01F6DC5B8009B2B4D /* Vocicard+CoreDataProperties.swift */; };
+		031336D61F6E8E3C009B2B4D /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031336D51F6E8E3C009B2B4D /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +45,17 @@
 		031336721F6D5112009B2B4D /* AntumVocilistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AntumVocilistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		031336761F6D5112009B2B4D /* AntumVocilistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntumVocilistTests.swift; sourceTree = "<group>"; };
 		031336781F6D5112009B2B4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		031336811F6D51D3009B2B4D /* Vocilist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocilist.swift; sourceTree = "<group>"; };
-		031336831F6D5337009B2B4D /* Vocicard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocicard.swift; sourceTree = "<group>"; };
 		031336851F6D5605009B2B4D /* VocilistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocilistTableViewCell.swift; sourceTree = "<group>"; };
 		031336871F6D583E009B2B4D /* VocilistTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocilistTableViewController.swift; sourceTree = "<group>"; };
 		031336891F6D5A67009B2B4D /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		0313368D1F6D709F009B2B4D /* VocicardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocicardTableViewCell.swift; sourceTree = "<group>"; };
 		031336911F6D724E009B2B4D /* VocicardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocicardViewController.swift; sourceTree = "<group>"; };
+		031336C31F6DBE3F009B2B4D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		031336CD1F6DC5B8009B2B4D /* Vocilist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocilist.swift; sourceTree = "<group>"; };
+		031336CE1F6DC5B8009B2B4D /* Vocilist+CoreDataProperties2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Vocilist+CoreDataProperties2.swift"; sourceTree = "<group>"; };
+		031336CF1F6DC5B8009B2B4D /* Vocicard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocicard.swift; sourceTree = "<group>"; };
+		031336D01F6DC5B8009B2B4D /* Vocicard+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Vocicard+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		031336D51F6E8E3C009B2B4D /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,10 @@
 		031336551F6D5111009B2B4D = {
 			isa = PBXGroup;
 			children = (
+				031336CD1F6DC5B8009B2B4D /* Vocilist.swift */,
+				031336CE1F6DC5B8009B2B4D /* Vocilist+CoreDataProperties2.swift */,
+				031336CF1F6DC5B8009B2B4D /* Vocicard.swift */,
+				031336D01F6DC5B8009B2B4D /* Vocicard+CoreDataProperties.swift */,
 				031336601F6D5111009B2B4D /* AntumVocilist */,
 				031336751F6D5112009B2B4D /* AntumVocilistTests */,
 				0313365F1F6D5111009B2B4D /* Products */,
@@ -90,8 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				031336611F6D5111009B2B4D /* AppDelegate.swift */,
-				031336811F6D51D3009B2B4D /* Vocilist.swift */,
-				031336831F6D5337009B2B4D /* Vocicard.swift */,
+				031336D51F6E8E3C009B2B4D /* DataStore.swift */,
+				031336C21F6DBE3F009B2B4D /* Model.xcdatamodeld */,
 				031336891F6D5A67009B2B4D /* Globals.swift */,
 				031336851F6D5605009B2B4D /* VocilistTableViewCell.swift */,
 				031336871F6D583E009B2B4D /* VocilistTableViewController.swift */,
@@ -219,11 +231,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				031336841F6D5337009B2B4D /* Vocicard.swift in Sources */,
+				031336D21F6DC5B8009B2B4D /* Vocilist+CoreDataProperties2.swift in Sources */,
+				031336D61F6E8E3C009B2B4D /* DataStore.swift in Sources */,
+				031336D11F6DC5B8009B2B4D /* Vocilist.swift in Sources */,
+				031336D31F6DC5B8009B2B4D /* Vocicard.swift in Sources */,
 				031336921F6D724E009B2B4D /* VocicardViewController.swift in Sources */,
-				031336821F6D51D3009B2B4D /* Vocilist.swift in Sources */,
+				031336D41F6DC5B8009B2B4D /* Vocicard+CoreDataProperties.swift in Sources */,
 				031336621F6D5111009B2B4D /* AppDelegate.swift in Sources */,
 				031336881F6D583E009B2B4D /* VocilistTableViewController.swift in Sources */,
+				031336C41F6DBE3F009B2B4D /* Model.xcdatamodeld in Sources */,
 				0313368E1F6D709F009B2B4D /* VocicardTableViewCell.swift in Sources */,
 				0313368A1F6D5A67009B2B4D /* Globals.swift in Sources */,
 				031336861F6D5605009B2B4D /* VocilistTableViewCell.swift in Sources */,
@@ -448,6 +464,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		031336C21F6DBE3F009B2B4D /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				031336C31F6DBE3F009B2B4D /* Model.xcdatamodel */,
+			);
+			currentVersion = 031336C31F6DBE3F009B2B4D /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 031336561F6D5111009B2B4D /* Project object */;
 }

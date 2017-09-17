@@ -20,12 +20,12 @@ class VocicardViewController: UIViewController, UITableViewDelegate, UITableView
     }
  
     @IBAction func wrongButton(_ sender: Any) {
-        vocilist.cards[currentActiveIndex.row].status = Globals.vocicardCellStatus.wrong
+        vocilist.getCards()[currentActiveIndex.row].status = Globals.VocicardCellStatus.wrong.rawValue
         _updateTableView()
         
     }
     @IBAction func correctButton(_ sender: Any) {
-        vocilist.cards[currentActiveIndex.row].status = Globals.vocicardCellStatus.correct
+        vocilist.getCards()[currentActiveIndex.row].status = Globals.VocicardCellStatus.correct.rawValue
         _updateTableView()
     }
     
@@ -61,9 +61,8 @@ class VocicardViewController: UIViewController, UITableViewDelegate, UITableView
         self.wrongButton.imageView?.contentMode = .scaleAspectFit
         self.viewButton.imageView?.contentMode = .scaleAspectFit
         self.correctButton.imageView?.contentMode = .scaleAspectFit
+        NSLog(String(vocilist.getCards().count))
 
-        let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
-        self.viewButton.addGestureRecognizer(gestureRecognizer)
     }
     
     func handlePan() {
@@ -76,7 +75,7 @@ class VocicardViewController: UIViewController, UITableViewDelegate, UITableView
     
     func _updateTableView() {
         let newIndexPath = IndexPath(row: currentActiveIndex.row+1, section: currentActiveIndex.section)
-        if newIndexPath.row < vocilist.cards.count {
+        if newIndexPath.row < vocilist.getCards().count {
             currentActiveIndex = newIndexPath
         }
         self.tableView.scrollToRow(at: currentActiveIndex, at: .middle, animated: true)
@@ -96,11 +95,11 @@ class VocicardViewController: UIViewController, UITableViewDelegate, UITableView
     // MARK: - TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vocilist.cards.count;
+        return vocilist.getCards().count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let vocicard = vocilist.cards[indexPath.row]
+        let vocicard = vocilist.getCards()[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "vocicardCell", for: indexPath) as? VocicardTableViewCell else {
             fatalError("The dequeued cell is not an instance of MealTableViewCell.")
         }
@@ -116,10 +115,10 @@ class VocicardViewController: UIViewController, UITableViewDelegate, UITableView
             cell.backgroundColor = Globals.greyColor
 
         }
-        if vocicard.status==Globals.vocicardCellStatus.def {
+        if vocicard.status == Globals.VocicardCellStatus.def.rawValue {
             cell.coverView.isHidden=false
             cell.resultBar.backgroundColor=Globals.darkGreyColor
-        } else if vocicard.status == Globals.vocicardCellStatus.correct {
+        } else if vocicard.status == Globals.VocicardCellStatus.correct.rawValue {
             cell.coverView.isHidden = true
             cell.resultBar.backgroundColor=Globals.greenColor
         } else {
