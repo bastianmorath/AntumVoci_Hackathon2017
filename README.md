@@ -2,4 +2,4 @@
 
 Simple app to learn vocabulary in different languages; Project still in progress!
 
-![alt text](https://user-images.githubusercontent.com/5672716/27516709-75208b50-59bf-11e7-8ade-8d82d4283079.png)
+![alt text](https://user-images.githubusercontent.com/5672716/31168156-b3616aa4-a8f4-11e7-9400-51383483677a.jpg)
